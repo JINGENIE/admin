@@ -31,6 +31,11 @@ public class MainController {
         model.addAttribute("center", "charts");
         return "index";
     }
+    @RequestMapping("/websocket")
+    public String websocket(Model model){
+        model.addAttribute("center", "websocket");
+        return "index";
+    }
     @RequestMapping("/login")
     public String login(Model model){
         model.addAttribute("center", "login");

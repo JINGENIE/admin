@@ -18,6 +18,7 @@
     <!-- Custom styles for this template-->
     <link href="/css/sb-admin-2.min.css" rel="stylesheet">
     <script src="/js/index0502.js"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=cb8fe6776643b3a6ad18f3e2f14a93c2"></script>
     <!-- jquery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <!-- HighCharts -->
@@ -32,6 +33,9 @@
     <script src="https://code.highcharts.com/modules/cylinder.js"></script>
     <script src="https://code.highcharts.com/modules/funnel3d.js"></script>
     <script src="https://code.highcharts.com/modules/pyramid3d.js"></script>
+    <!--websocket -->
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
 </head>
 <body id="page-top">
 
@@ -159,11 +163,13 @@
                 <span>Tables</span></a>
         </li>
         <!-- Nav Item - livechart -->
+        <c:if test="${loginadm!=null}">
         <li class="nav-item">
-            <a class="nav-link" href="/livechart">
+            <a class="nav-link" href="/websocket">
                 <i class="fas fa-fw fa-chart-area"></i>
-                <span>Live Chart</span></a>
+                <span>websocket</span></a>
         </li>
+        </c:if>
 
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">
